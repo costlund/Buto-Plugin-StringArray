@@ -1,13 +1,23 @@
 # Buto-Plugin-StringArray
 
-Create array from string.
 
 
-
+Inlude plugin and create an object.
 ```
 wfPlugin::includeonce('string/array');
 $plugin = new PluginStringArray();
-$array = $plugin->from_space('a b c');
+```
+
+Create array from string with space.
+```
+print_r($plugin->from_space('a b c'));
+```
+
+
+Create array from string with slash.
+```
+print_r($plugin->from_slash('aaa/bbb/ccc'));
+
 ```
 
 

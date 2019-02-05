@@ -21,4 +21,14 @@ class PluginStringArray{
   private function has_multiple_space($str){
     return strstr($str, '  ');
   }
+  public function from_slash($str){
+    /**
+     * Create array.
+     */
+    $array = preg_split('#/#', $str);
+    /**
+     * Return.
+     */
+    return $array;
+  }
 }
