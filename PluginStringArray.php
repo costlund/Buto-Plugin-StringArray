@@ -31,4 +31,34 @@ class PluginStringArray{
      */
     return $array;
   }
+  public function from_tab($str){
+    /**
+     * Create array.
+     */
+    $array = preg_split("/[\t]/", $str);
+    /**
+     * Return.
+     */
+    return $array;
+  }
+  public function from_char($str, $char){
+    /**
+     * Create array.
+     */
+    $array = preg_split("/$char/", $str);
+    /**
+     * Return.
+     */
+    return $array;
+  }
+  public function from_br($str){
+    /**
+     * Create array.
+     */
+    $array = preg_split("/(\r\n|\n|\r)/", $str);
+    /**
+     * Return.
+     */
+    return $array;
+  }
 }
