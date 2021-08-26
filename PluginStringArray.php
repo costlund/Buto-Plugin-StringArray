@@ -61,4 +61,19 @@ class PluginStringArray{
      */
     return $array;
   }
+  public function from_excel_data($value){
+    $excel_data = $this->from_char($value, '\r\n');
+    $temp = array();
+    $rows = 0;
+    $columns = 0;
+    foreach($excel_data as $v){
+      $rows++;
+      $v2 = $this->from_tab($v);
+      $columns = sizeof($v2);
+      $temp[] = $v2;
+    }
+    $excel_data = $temp;
+    unset($temp);
+    return array('rows' => $rows, 'columns' => $columns, 'data' => $excel_data);
+  }
 }
