@@ -4,9 +4,9 @@ class PluginStringArray{
     /**
      * Clean upp where there is multiple space.
      */
-    if($clean && strstr($str, '  ')){
+    if($clean && wfPhpfunc::strstr($str, '  ')){
       while($this->has_multiple_space($str)){
-        $str = str_replace('  ', ' ', $str);
+        $str = wfPhpfunc::str_replace('  ', ' ', $str);
       }
     }
     /**
@@ -19,7 +19,7 @@ class PluginStringArray{
     return $array;
   }
   private function has_multiple_space($str){
-    return strstr($str, '  ');
+    return wfPhpfunc::strstr($str, '  ');
   }
   public function from_slash($str){
     /**
