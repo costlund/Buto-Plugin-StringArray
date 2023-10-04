@@ -12,7 +12,7 @@ class PluginStringArray{
     /**
      * Create array.
      */
-    $array = preg_split('/ /', $str);
+    $array = preg_split('/ /', (string)$str);
     /**
      * Return.
      */
@@ -25,7 +25,7 @@ class PluginStringArray{
     /**
      * Create array.
      */
-    $array = preg_split('#/#', $str);
+    $array = preg_split('#/#', (string)$str);
     /**
      * Return.
      */
@@ -35,7 +35,7 @@ class PluginStringArray{
     /**
      * Create array.
      */
-    $array = preg_split("/[\t]/", $str);
+    $array = preg_split("/[\t]/", (string)$str);
     /**
      * Return.
      */
@@ -45,7 +45,7 @@ class PluginStringArray{
     /**
      * Create array.
      */
-    $array = preg_split("/$char/", $str);
+    $array = preg_split("/$char/", (string)$str);
     /**
      * Return.
      */
@@ -55,7 +55,7 @@ class PluginStringArray{
     /**
      * Create array.
      */
-    $array = preg_split("/(\r\n|\n|\r)/", $str);
+    $array = preg_split("/(\r\n|\n|\r)/", (string)$str);
     /**
      * Return.
      */
